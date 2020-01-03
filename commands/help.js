@@ -12,7 +12,7 @@ if (!args.length) {
 const embed = new Discord.RichEmbed()
 .setTitle('Commands')
 .setColor('RANDOM')
-.setDescription(commands.map(command => command.name).join('\n '))
+.setDescription(commands.map(command => { return `**${command.name}**: ${command.description}`}).join('\n'))
 .setFooter(`You can send ${prefix}help [command name] to get info on a specific command!`)
 return message.author.send(embed)
 	.then(() => {
@@ -24,7 +24,7 @@ return message.author.send(embed)
 		message.reply('it seems like I can\'t DM you! Do you have DMs disabled?');
 	});
 }
-    const name = args[0].toLowerCase();
+const name = args[0].toLowerCase();
 const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
 
 if (!command) {
