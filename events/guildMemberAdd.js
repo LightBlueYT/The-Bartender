@@ -24,5 +24,7 @@ module.exports = async (client, member) => {
   
   const logs = member.guild.channels.find(c => c.name.match('bot-logs'));
   
+  member.addRole(Member)
+  
   logs.send(`Welcome <@${member.id}> to **${member.guild.name}** enjoy your stay!`)
 }
