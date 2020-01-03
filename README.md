@@ -1,6 +1,6 @@
 [Github](https://github.com/LightBlueYT/The-Bartender)
 ## *NEWS*
-***
+
 Update 0.0.2 published with several items
 
 * Ban command
