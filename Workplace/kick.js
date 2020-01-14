@@ -37,7 +37,6 @@ module.exports = {
     .addField(`Executor`, executor.displayName)
     .setColor(`RANDOM`)
     
-    
     member.user.send(user)
     log.send(server)
     .then(() => member.kick())

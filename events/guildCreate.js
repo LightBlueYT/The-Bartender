@@ -36,10 +36,8 @@ module.exports = async (client, guild) => {
     client.channels.get(channels[i].id).overwritePermissions(Member, {VIEW_CHANNELS: true, READ_MESSAGE_HISTORY: true})
     client.channels.get(channels[i].id).overwritePermissions(guild.id, {VIEW_CHANNELS: true, READ_MESSAGE_HISTORY: true})
     client.channels.get(channels[i].id).overwritePermissions(Muted, {SEND_MESSAGES: false, VIEW_CHANNELS: true, READ_MESSAGE_HISTORY: true})
-    client.setTimeout(permLoop, 10000)
     }
   }
-  
   client.setInterval(permLoop, 10*1000)
   
   guild.owner.user.send(`

@@ -1,13 +1,31 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({fetchAllMembers: true});
 
 
 const Enmap = require('enmap');
 const fs = require('fs');
 
-
 const config = require('./config.json');
 client.config = config;
+
+
+client.settings = new Enmap({
+  name: "settings",
+  fetchAll: false,
+  autoFetch: true,
+  cloneLevel: 'deep'
+});
+
+const defaultSettings = {
+  prefix: "!",
+  modLogChannel: "bot-logs",
+  muteRole: "Muted",
+  modRole: "Moderator",
+  adminRole: "Administrator",
+  welcomeChannel: "welcome",
+  welcomeMessage: "Welcome {{user}}",
+  joinRole: "Members"
+}
 
 
 client.events = new Enmap({name: 'Events'});
