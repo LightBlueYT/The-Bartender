@@ -1,6 +1,12 @@
 [Github](https://github.com/LightBlueYT/The-Bartender)
 ## *NEWS*
 ***
+Update 0.0.3 published with updates
+* guildMemberAdd event
+* SetConf command
+* Config command
+<br>
+<br>
 Update 0.0.2 published with several items
 
 * Ban command
