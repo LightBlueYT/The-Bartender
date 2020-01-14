@@ -1,0 +1,8 @@
+module.exports = {
+	name: '',
+	description: '',
+  category: '',
+	execute(message, args, client) {
+  
+	},
+};

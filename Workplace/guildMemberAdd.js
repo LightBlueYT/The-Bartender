@@ -42,7 +42,6 @@ module.exports = async (client, member) => {
   
   let embed = new Discord.RichEmbed()
   .setTitle(welcomeMessage)
-  .setImage(member.user.displayAvatarURL)
   
   
   channel.send(embed)
