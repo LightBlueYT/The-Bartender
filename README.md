@@ -17,11 +17,7 @@ Update 0.0.2 published with several items
 * Mute command
 * MutePerm command
 * Ping command
-<br>
-<br>
 * guildCreate event
 * guildMemberAdd event
 * message event
 * ready event
-<br>
-<br>
