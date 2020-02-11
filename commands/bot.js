@@ -11,7 +11,7 @@ module.exports = {
     const guilds = client.guilds.size;
     const emojis = client.emojis.size;
     const uptime = ms(client.uptime);
-    const ping = ms(client.ping);
+    const ping = Math.floor(client.ping);
     const version = client.config.version;
     const picture = client.user.displayAvatarURL;
     
