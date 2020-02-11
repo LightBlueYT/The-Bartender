@@ -4,7 +4,7 @@ module.exports = {
 	name: 'bot',
 	description: 'Shows bot information',
   category: 'Informational',
-	execute(message, args, client) {
+	execute(message, guildConf, args, client) {
     
     const usersHuman = client.users.filter(user => !user.bot).size;
     const usersBots = client.users.filter(user => user.bot).size;
@@ -24,7 +24,7 @@ module.exports = {
     .addField(`Emojis`, emojis, true)
     .addField(`Guilds`, guilds, true)
     .addField(`Uptime`, uptime, true)
-    .addField(`Ping`, ping, true)
+    .addField(`Ping`, ms(ping), true)
     .addField(`Version`, version, true)
     
     

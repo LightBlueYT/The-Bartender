@@ -2,7 +2,7 @@ module.exports = {
 	name: '',
 	description: '',
   category: '',
-	execute(message, args, client) {
+	execute(message, guildConf, args, client) {
   
 	},
 };

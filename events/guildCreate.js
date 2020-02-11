@@ -1,4 +1,16 @@
+const Discord = require('discord.js')
 module.exports = async (client, guild) => {
+  
+  const channel = client.guild.channels.find('671984787397017600');
+  
+  
+  let embed = new Discord.RichEmbed()
+  .setTitle(`Ive found a new guild, ${guild.name} hooray!`)
+  .setDescription('Heres some fact about it')
+  .addField('Members', `${guild.members.size}`) 
+  .addField('Emojis', `${guild.emojis.size}`)
+  
+  channel.send(embed)
   
   const humans = guild.members.filter(member => !member.user.bot).size;
   const bots = guild.members.filter(member => member.user.bot).size;

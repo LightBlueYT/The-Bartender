@@ -8,7 +8,10 @@ const defaultSettings = {
   welcomeMessage: "Welcome {{user}}",
   joinRole: "Members"
 }
-module.exports = async (client, message) => {
+module.exports = async (client, oMessage, nMessage) => {
+    
+  let message = nMessage
+  
   const guildConf = client.settings.ensure(message.guild.id, defaultSettings);
 
 	if (!message.content.startsWith(guildConf.prefix) || message.author.bot) return;
@@ -22,5 +25,6 @@ try {
 	client.commands.get(command).execute(message, guildConf, args, client);
 } catch (error) {
 	console.error(error);
+	message.reply(`Hmm, seems like the command you used dont exist.`);
 }
 }
